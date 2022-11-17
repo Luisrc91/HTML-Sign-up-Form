@@ -14,11 +14,21 @@
         <h2>Vacation Contest Sign-Up Form</h2>
         <form action="./results.html" method="GET"> <!-- TODO: Set Action and Method Properties -->
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
+                <label for="firstname">Your First Name<span 
+                    class="required-field">*</span></label>
+                <input type="text" id="firstname" name="firstname"
+                minlength="2" maxlength="35" required>
+
                 <!-- TODO: Create a "lastname" input with type "text" -->
-                <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname">
+                <label for="lastname">Your Last Name<span 
+                    class="required-field">*</span></label>
+                <input type="text" id="lastname" name="lastname"
+                minlength="2" maxlength="35" required>
+
+                <label for="age">Age<span 
+                    class="required-field">*</span></label>
+                <input type="number" id="age" name="age" min="21" max="120" required>
+                <h5>Must be age 21 or older to enter the contest</h5>
             </div>
             <!-- TODO: Make fieldset and legend -->
             <div>
@@ -28,8 +38,20 @@
 
                         <legend>Your Contact Info</legend>
                         <div>
-                        <label for="Email">Email</label>
-                        <input type="text" id="Email" name="email">
+                        <label for="Email">Email<span 
+                            class="required-field">*</span></label>
+                        <input type="text" id="Email" name="email" required>
+
+                        <label for="text">Password<span class="required-field">*</span></label>
+                    
+                        <input type="password" id="password" name="password"
+                            title= "
+                            6 Alphanumeric Character Pass Code. 
+                            One Uppercase allowed.
+                            Digits 0-9 are allowed.
+                            Lowercase letters a-z are allowed.
+                            "
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required >
                         </div>
                         <div>
                         <!-- Todo: Street Address Input -->
@@ -93,12 +115,14 @@
                                     <option value="WI">Wisconsin</option>
                                     <option value="WV">West Virginia</option>
                                     <option value="WY">Wyoming</option>
-                                </select>
+                            </datalist>
                                 
-                           
-
-                        <label for="Zipcode">Zipcode</label>
-                        <input type="text" name="Zipcode" id="zipcode">
+                        <div>   
+                        
+                            <label for="Zipcode">Zipcode</label>
+                            <input type="text" name="Zipcode" id="zipcode"
+                             pattern="[0-9]{5}" title="5-Digit US ZIP Code">
+                        </div>
                     </fieldset>
             </div>
             <div>
@@ -131,7 +155,8 @@
                     </div>
                     <div>
                         <h3>Amenities</h3>
-                       <div>
+                       
+                        <div>
                         <input type="checkbox" id="Hot-Tub" name="extras">
                         <label for="Hot-Tub">Hot Tub</label>
                        </div>
@@ -140,10 +165,21 @@
                         <input type="checkbox" id="swiming-pool" name="extras">
                         <label for="swiming-pool">Swiming Pool</label>
                        </div>
-                        <div>
+                       
+                       <div>
                         <input type="checkbox" id="oceanView" name="extras" checked>
                         <label for="oceanView">Ocean View</label>
-                        </div>
+                       </div>
+
+                       <div>
+                        <input type="checkbox" id="Wifi" name="extras">
+                        <label for="Wifi"> Fastest Wifi</label>
+                       </div>
+                       <div>
+                        <input type="checkbox" id="breakfast" name="extras">
+                        <label for="breakfast">Complimentary breakfast delivery to Room</label>
+                       </div>
+
                     </div>
                 </fieldset>
 
