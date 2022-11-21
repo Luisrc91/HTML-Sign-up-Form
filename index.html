@@ -45,13 +45,8 @@
                         <label for="text">Password<span class="required-field">*</span></label>
                     
                         <input type="password" id="password" name="password"
-                            title= "
-                            6 Alphanumeric Character Pass Code. 
-                            One Uppercase allowed.
-                            Digits 0-9 are allowed.
-                            Lowercase letters a-z are allowed.
-                            "
-                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required >
+                            title= "6-Character Alphanumeric Pass Code"
+                            pattern="[0-9a-zA-Z]{6}" required >
                         </div>
                         <div>
                         <!-- Todo: Street Address Input -->
@@ -149,11 +144,13 @@
                         <label for="new-zealand">New Zealand</label>
                     
                     </div>
+                    <!-- TODO: Color input for selecting favorite color -->
                     <div>
                         <label for="Favorite">Favorite Color</label>
                         <input type="Color" id="Color" name="color">
                     </div>
                     <div>
+                         <!-- TODO: Checkboxes for selecting extra add-ons -->
                         <h3>Amenities</h3>
                        
                         <div>
@@ -182,6 +179,7 @@
 
                     </div>
                 </fieldset>
+                <!-- TODO: Submit Button -->
 
                 <input type="submit" value="Enter the Contest!">
                 
@@ -195,10 +193,10 @@
             
 
             
-            <!-- TODO: Color input for selecting favorite color -->
-            <!-- TODO: Checkboxes for selecting extra add-ons -->
             
-            <!-- TODO: Submit Button -->
+           
+            
+            
         </form>
     </main>
     <footer>
